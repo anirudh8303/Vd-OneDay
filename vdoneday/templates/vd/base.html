@@ -16,43 +16,149 @@
     <title>VD</title>
   </head>
   <style>
-    .navigation {
-      display: flex;
-      height: 115px;
-      border-bottom: 2.5px rgb(27, 82, 27) solid;
-      flex-direction: column;
-      background-color: rgb(203, 219, 197);
+    /*-------------------------------------------For PC View----------------------------------------------------------*/
+    .nav-wrapper {
+      width: 100%;
+      position: -webkit-fixed; /* Safari */
+      position: fixed;
+      top: 0;
+      background-color: #fff;
+      opacity: 90%;
+      z-index: 5;
     }
-    .navigation_right {
-      display: flex;
-      flex: 1;
-      justify-content: space-evenly;
+
+    .grad-bar {
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      -webkit-animation: gradbar 15s ease infinite;
+      -moz-animation: gradbar 15s ease infinite;
+      animation: gradbar 15s ease infinite;
     }
-    .home > a {
-      color: black !important;
-      text-decoration: none !important;
-      font-size: large;
+
+    /* NAVIGATION */
+
+    .navbar {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      height: 7em;
+      overflow: hidden;
     }
-    .event > a {
-      color: black !important;
-      text-decoration: none !important;
-      font-size: large;
+
+    .navbar img {
+      height: 7em;
+      width: auto;
+      position: absolute;
+      top: -1.5em;
+      right: 48%;
     }
-    .contact > a {
-      color: black !important;
-      text-decoration: none !important;
-      font-size: large;
+
+    .navbar ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      margin-top: 2em;
     }
-    .home > a:hover {
-      color: white !important;
+
+    .nav-item a {
+      color: #000;
+      font-size: 1rem;
+      font-weight: 550;
+      text-decoration: none;
+      transition: color 0.3s ease-out;
     }
-    .event > a:hover {
-      color: white !important;
+
+    .nav-item a:hover {
+      color: #3498db;
     }
-    .contact > a:hover {
-      color: white !important;
+
+    /* MOBILE MENU & ANIMATION */
+
+    .menu-toggle .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #3f3f3f;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
+
+    .menu-toggle {
+      justify-self: end;
+      margin-right: 25px;
+      display: none;
+    }
+
+    .menu-toggle:hover {
+      cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      -ms-transform: translateY(8px) rotate(45deg);
+      -o-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      -ms-transform: translateY(-8px) rotate(-45deg);
+      -o-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* KEYFRAME ANIMATIONS */
+
+    @-webkit-keyframes gradbar {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @-moz-keyframes gradbar {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes gradbar {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
     @media (min-width: 1170px) {
+      .sectionCSS {
+        position: absolute;
+        top: 7.1em;
+        width: 100%;
+        margin-left: -1em;
+      }
       .green_back {
         background: linear-gradient(
           to right,
@@ -71,6 +177,7 @@
       .img1 {
         border: white solid 1em;
         margin-top: 6em;
+        margin-left: 1em;
       }
 
       .slash1 {
@@ -110,6 +217,7 @@
       .slash2div {
         background-image: none;
         margin-top: 3em;
+        margin-left: 1em;
       }
 
       .img2 {
@@ -137,14 +245,14 @@
       .alignOur {
         float: right;
         margin-right: 10em;
-        margin-top: -57em;
+        margin-top: -27em;
       }
 
       .designImg {
         height: 10em;
         position: absolute;
         right: 2em;
-        margin-top: -5em;
+        margin-top: -11em;
       }
 
       .marginGrey {
@@ -159,6 +267,7 @@
         z-index: -2;
         width: 100%;
         margin-top: 7%;
+        margin-left: 1em;
       }
 
       .meet-our-team-container {
@@ -218,6 +327,7 @@
         position: relative;
         z-index: -2;
         width: 100%;
+        margin-left: 1em;
       }
 
       .contact-heading {
@@ -261,7 +371,14 @@
         cursor: pointer;
       }
     }
+    /*---------------------------------------Medium Screen View------------------------------------------------------------*/
     @media (min-width: 775px) and (max-width: 1170px) {
+      .sectionCSS {
+        position: absolute;
+        top: 7.1em;
+        width: 100%;
+        margin-left: -1em;
+      }
       .green_back {
         background: linear-gradient(
           to right,
@@ -294,7 +411,7 @@
         width: 30em;
         background-color: rgb(232, 230, 230);
         border: white solid 1em;
-        right: 20em;
+        right: 18em;
         margin-top: 2em;
         display: block;
         position: absolute;
@@ -360,6 +477,7 @@
       .marginGrey {
         margin-bottom: 5em;
       }
+
       #MeetOurTeam {
         background-color: #fafafa;
         color: #000;
@@ -368,6 +486,7 @@
         z-index: -2;
         width: 100%;
         margin-top: 7%;
+        margin-left: 1em;
       }
 
       .meet-our-team-container {
@@ -427,6 +546,7 @@
         position: relative;
         z-index: -2;
         width: 100%;
+        margin-left: 1em;
       }
 
       .contact-heading {
@@ -470,7 +590,67 @@
         cursor: pointer;
       }
     }
+
+    /*-------------------------------------------For Mobile View---------------------------------------------------------*/
+
     @media (max-width: 775px) {
+      .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: start;
+        top: 55px;
+        background-color: #fff;
+        width: 100%;
+        height: calc(100vh - 55px);
+        transform: translate(-101%);
+        text-align: center;
+        overflow: hidden;
+      }
+      .navbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        height: 5em;
+        overflow: hidden;
+      }
+      .navbar img {
+        height: 5em;
+        width: auto;
+        position: absolute;
+        top: -4%;
+        left: 4%;
+      }
+      .navbar li {
+        padding: 15px;
+      }
+
+      .navbar li:first-child {
+        margin-top: 50px;
+      }
+
+      .navbar li a {
+        font-size: 1rem;
+      }
+
+      .menu-toggle,
+      .bar {
+        display: block;
+        cursor: pointer;
+        top: 38%;
+        position: relative;
+        right: 2%;
+      }
+
+      .mobile-nav {
+        transform: translate(0%) !important;
+      }
+      .sectionCSS {
+        position: absolute;
+        top: 5em;
+        width: 100%;
+        margin-left: 0em;
+      }
       .green_back {
         background-color: rgb(203, 219, 197);
         position: relative;
@@ -515,7 +695,7 @@
       }
 
       .slash2div {
-        background-image: url("images/slash2.png");
+        background-image: url("../../media/vd/slash2.png");
         margin-top: 3em;
       }
 
@@ -653,78 +833,43 @@
   </style>
 
   <body>
+    <!------------------------------------------------------NAVBAR-------------------------------------------------------->
     <section>
-      <div class="navigation">
-        <div class="navigation_left">
-          <center>
-            <img
-              style="height: 80px; width: 70px; margin-left: 30px;"
-              src="/media/vd/VD2.png"
-            />
-          </center>
-        </div>
-        <div class="navigation_right">
-          <div class="home">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              fill="currentColor"
-              class="bi bi-house"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
-              />
-            </svg>
-            <a href="">Home</a>
-          </div>
-          <div class="event">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="22"
-              fill="currentColor"
-              class="bi bi-calendar"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
-              />
-            </svg>
-            <a href="">Events</a>
-          </div>
-          <div class="contact">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="22"
-              fill="currentColor"
-              class="bi bi-telephone"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-              />
-            </svg>
-            <a href="">Contact</a>
-          </div>
+      <div>
+        <div class="nav-wrapper">
+          <nav class="navbar">
+            <div width="100vw">
+              <img src="../../media/vd/VD2.png" alt="Company Logo" />
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <br />
+            <ul class="nav no-search">
+              <li class="nav-item"><a href="#"></a></li>
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item"><a href="#">Events</a></li>
+              <li class="nav-item"><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="grad-bar"></div>
         </div>
       </div>
+
       <div style="position: fixed; top: 18em; z-index: 100; right: 2em;">
-        <img src="/media/vd/fb.png" style="height: 1.5em;" /><br /><br /><img
-          src="/media/vd/instagram.png"
+        <img
+          src="../../media/vd/fb.png"
+          style="height: 1.5em;"
+        /><br /><br /><img
+          src="../../media/vd/instagram.png"
           style="height: 1.5em;"
         />
       </div>
     </section>
     <!---------------------------------------------------Green And White -------------------------------------------------->
-    <section style="position: absolute; top: 7em; width: 100%;">
+    <section class="sectionCSS">
       <div class="container-fluid">
         <div class="row">
           <div class="col green_back">
@@ -736,7 +881,7 @@
                 />
               </div>
               <div>
-                <img class="img-fluid slash1" src="/media/vd/slash1.png" />
+                <img class="img-fluid slash1" src="../../media/vd/slash1.png" />
               </div>
               <div class="boxOut">
                 <div class="boxContent">
@@ -761,12 +906,15 @@ Book an Appointment &emsp; --></pre>
                 />
               </div>
               <div>
-                <img class="img-fluid slash2img" src="/media/vd/slash2.png" />
+                <img
+                  class="img-fluid slash2img"
+                  src="../../media/vd/slash2.png"
+                />
               </div>
               <div class="alignOur">
                 <div>
                   <img
-                    src="/media/vd/design1.png"
+                    src="../../media/vd/design1.png"
                     class="img-fluid designImg"
                   />
                 </div>
@@ -808,7 +956,7 @@ Book an Appointment &emsp; --></pre>
             <div class="founder-img">
               <img
                 class="img-fluid border-radius"
-                src="/media/vd/johndoe.webp"
+                src="../../media/vd/jondoe.png"
                 alt=""
               />
             </div>
@@ -833,7 +981,7 @@ Book an Appointment &emsp; --></pre>
             <div class="founder-img">
               <img
                 class="img-fluid border-radius"
-                src="/media/vd/jamesdoe.webp"
+                src="../../media/vd/jamesdoe.png"
                 alt=""
               />
             </div>
@@ -858,7 +1006,7 @@ Book an Appointment &emsp; --></pre>
             <div class="founder-img">
               <img
                 class="img-fluid border-radius"
-                src="/media/vd/jackdoe.webp"
+                src="../../media/vd/jackdoe.png"
                 alt=""
               />
             </div>
@@ -891,11 +1039,11 @@ Book an Appointment &emsp; --></pre>
             <h4>OPENING HOURS</h4>
             <p>
               Mon - Fri :<br />
-              10am - 7pm
+              10am - 7pm
             </p>
             <p>
               Sat - Sun :<br />
-              11am - 4pm
+              11am - 4pm
             </p>
             <br />
           </div>
@@ -949,6 +1097,14 @@ Book an Appointment &emsp; --></pre>
         © 2023 by BRW BAR inc. Proudly created with Wix.com
       </div>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(".menu-toggle").click(function () {
+        $(".nav").toggleClass("mobile-nav");
+        $(this).toggleClass("is-active");
+      });
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
