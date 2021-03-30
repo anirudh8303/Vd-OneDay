@@ -19,4 +19,7 @@ from .import views
 
 urlpatterns = [
     path('', views.home, name="home"),
+    path('event/', views.event, name="event"),
+    path('upcomingevents/', views.upevent, name="upevent"),
+    path('contact/', views.contact, name="contact"),
 ]

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--GOOGLE-FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!--GOOGLE-FONTS-->
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      body {
+        background-color: rgb(140, 141, 140);
+      }
+      .vd-events {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0%;
+        text-align: center;
+        height: 100vh;
+      }
+
+      #up-and-past-events {
+        width: 100%;
+        height: 100%;
+      }
+
+      .vd-past-events {
+        background-color: #cbdbc5;
+
+        margin: 1% 1%;
+        padding-top: 16%;
+      }
+
+      .vd-up-events {
+        background-color: #cbdbc5;
+        padding-top: 16%;
+        margin: 1% 1% 1% 0%;
+      }
+
+      .event-container {
+        margin: 0% 20% 4% 20%;
+        text-align: center;
+        padding: 2%;
+      }
+
+      .event-heading {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+
+        transition: transform 0.5s ease;
+      }
+
+      .event-heading:hover {
+        -ms-transform: scale(1.4);
+
+        -webkit-transform: scale(1.4);
+
+        transform: scale(1.4);
+      }
+
+      @media (max-width: 768px) {
+        .vd-events {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .vd-past-events {
+          background-color: #cbdbc5;
+
+          margin: 1% 1%;
+          padding-top: 2%;
+          padding-bottom: 2%;
+        }
+
+        .vd-up-events {
+          background-color: #cbdbc5;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          margin: 0% 1% 1% 1%;
+        }
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="navbar.js"></script>
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+
+  <body width="100%" height="100%">
+    <!--------------------------------------------------------------Navbar---------------------------------->
+    <section>
+      <span id="NavBar"></span>
+      <div style="position: fixed; top: 18em; z-index: 100; right: 2em;">
+        <img src="/media/vd/fb.png" style="height: 1.5em;" /><br /><br /><img
+          src="/media/vd/instagram.png"
+          style="height: 1.5em;"
+        />
+      </div>
+    </section>
+    <!---------------------------------------------------up-past-event-section -------------------------------------------------->
+
+    <section id="up-and-past-events">
+      <div class="vd-events">
+        <div class="vd-past-events">
+          <img
+            src="/media/vd/VD2.png"
+            alt=""
+            height="230px"
+            width="230px"
+            data-aos="fade-right"
+          /><br />
+          <div class="event-container" data-aos="fade-right">
+            <a href="#" style="text-decoration: none; color: black;">
+              <div class="event-heading">
+                <h2>Past Events »</h2>
+              </div>
+            </a>
+            <br />
+            <div class="events-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        <div class="vd-up-events">
+          <img
+            src="/media/vd/VD2.png"
+            alt=""
+            height="230px"
+            width="230px"
+            data-aos="fade-left"
+          /><br />
+
+          <div class="event-container" data-aos="fade-left">
+            <a href="#" style="text-decoration: none; color: black;">
+              <div class="event-heading">
+                <a href="/upcomingevents"><h2>Upcoming Events »</h2></a>
+              </div>
+            </a>
+            <br />
+            <div class="events-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(".menu-toggle").click(function () {
+        $(".nav").toggleClass("mobile-nav");
+        $(this).toggleClass("is-active");
+      });
+    </script>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>

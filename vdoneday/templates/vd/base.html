@@ -790,7 +790,6 @@
         padding: 3% 5%;
         color: #c6c6c6;
         position: relative;
-        z-index: -2;
         width: 100%;
         margin: 0%;
       }
@@ -825,7 +824,7 @@
         background-color: #212121;
         color: #cbdbc5;
         padding: 12px 20px;
-        border: none;
+        border: 4px solid white;
         border-radius: 4px;
         cursor: pointer;
       }
@@ -849,14 +848,31 @@
             <br />
             <ul class="nav no-search">
               <li class="nav-item"><a href="#"></a></li>
-              <li class="nav-item"><a href="#">Home</a></li>
-              <li class="nav-item"><a href="#">Events</a></li>
-              <li class="nav-item"><a href="#">Contact Us</a></li>
+              <li class="nav-item"><a href="/">Home</a></li>
+              <li class="nav-item"><a href="/event">Events</a></li>
+              <li class="nav-item"><a href="#contact">Contact Us</a></li>
             </ul>
           </nav>
           <div class="grad-bar"></div>
         </div>
       </div>
+
+      {% for message in messages %}
+      <div
+        class="alert alert-{{message.tags}} alert-dismissible fade show"
+        role="alert"
+      >
+        <strong>Message :</strong> {{message}}
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
 
       <div style="position: fixed; top: 18em; z-index: 100; right: 2em;">
         <img
@@ -875,10 +891,7 @@
           <div class="col green_back">
             <div class="marginGreen">
               <div>
-                <img
-                  class="img-fluid img1"
-                  src="https://static.wixstatic.com/media/d99169_4713498713044ad7bf124ab3d6b0c51c~mv2_d_3840_5760_s_4_2.jpg/v1/crop/x_0,y_670,w_3840,h_2792/fill/w_847,h_608,al_c,q_85,usm_0.66_1.00_0.01/d99169_4713498713044ad7bf124ab3d6b0c51c~mv2_d_3840_5760_s_4_2.webp"
-                />
+                <img class="img-fluid img1" src="/media/vd/homevd.jpeg" />
               </div>
               <div>
                 <img class="img-fluid slash1" src="../../media/vd/slash1.png" />
@@ -906,10 +919,7 @@ Book an Appointment &emsp; --></pre>
                 />
               </div>
               <div>
-                <img
-                  class="img-fluid slash2img"
-                  src="../../media/vd/slash2.png"
-                />
+                <img class="img-fluid slash2img" src="/media/vd/slash2.png" />
               </div>
               <div class="alignOur">
                 <div>
@@ -1056,27 +1066,27 @@ Book an Appointment &emsp; --></pre>
           </div>
           <div class="contact-container-inner-1">
             <div class="contact-us">
-              <form action="/action_page.php">
+              <form action="/contact" method="POST">
                 <table style="width: 100%; text-align: left;">
                   <tr>
                     <td><label for="fname">First Name</label></td>
                   </tr>
                   <tr>
-                    <td><input type="text" id="fname" name="firstname" /></td>
+                    <td><input type="text" id="fname" name="first_name" /></td>
                   </tr>
 
                   <tr>
                     <td><label for="lname">Last Name</label></td>
                   </tr>
                   <tr>
-                    <td><input type="text" id="lname" name="lastname" /></td>
+                    <td><input type="text" id="lname" name="last_name" /></td>
                   </tr>
 
                   <tr>
                     <td><label for="lname">E-mail Id</label></td>
                   </tr>
                   <tr>
-                    <td><input type="text" id="email" name="emailID" /></td>
+                    <td><input type="text" id="email" name="email" /></td>
                   </tr>
 
                   <tr>
@@ -1085,7 +1095,6 @@ Book an Appointment &emsp; --></pre>
                   <tr>
                     <td><textarea id="subject" name="subject"></textarea></td>
                   </tr>
-
                   <tr>
                     <td><input type="submit" value="Submit" /></td>
                   </tr>
