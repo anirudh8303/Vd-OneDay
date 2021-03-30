@@ -21,5 +21,6 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('event/', views.event, name="event"),
     path('upcomingevents/', views.upevent, name="upevent"),
+    path('pastevents/', views.pastevent, name="pastevent"),
     path('contact/', views.contact, name="contact"),
 ]

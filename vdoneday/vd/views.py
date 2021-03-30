@@ -19,6 +19,10 @@ def upevent(request):
     return render(request, 'vd/upcomingevents.html', params)
 
 
+def pastevent(request):
+    return render(request, 'vd/past_events.html')
+
+
 def contact(request):
     if request.method == "POST":
         fname = request.POST['first_name']
