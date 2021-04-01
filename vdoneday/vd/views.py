@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Contact, UpcomingEvent
 from django.contrib import messages
 
@@ -28,12 +28,11 @@ def contact(request):
         fname = request.POST['first_name']
         lname = request.POST['last_name']
         email = request.POST['email']
-        phone = request.POST['phone']
         subject = request.POST['sub']
 
         contact = Contact(person_fname=fname, person_lname=lname,
-                          email=email, phone=phone, subject_of_talk=subject)
+                          email=email, subject_of_talk=subject)
         contact.save()
         messages.success(request, "Your review is submitted")
 
-        return render(request, 'vd/base.html')
+        return redirect('/')

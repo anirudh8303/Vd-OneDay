@@ -811,6 +811,17 @@
         background-color: #212121;
         color: white;
       }
+      #phn {
+        width: 100%;
+        padding: 4px;
+        border: 1px solid#c6c6c6;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        background-color: #212121;
+        color: white;
+      }
 
       input[type="submit"] {
         background-color: #212121;
@@ -925,21 +936,31 @@ Book an Appointment &emsp; --></pre>
                   <br />
                   <br />
                   <p>
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes to the font. Feel free
-                    to drag and drop me anywhere you like on your page. I’m a
-                    great place for you to tell a story and let your users know
-                    a little more about you.
-                  </p>
-                  <p>
-                    This is a great space to write long text about your company
-                    and your services. You can use this space to go into a
-                    little more detail about your company. Talk about your team
-                    and what services you provide. Tell your visitors the story
-                    of how you came up with the idea for your business and what
-                    makes you different from your competitors. Make your company
-                    stand out and show your visitors who you are.​
+                    "A smiling face is a beautiful face, A smiling heart is a
+                    beautiful heart". Here at VD we believe that every life is
+                    story, every day is a new chapter and there are no retakes.
+                    Today when laughing souls and happy times are lost in the
+                    wind VD is here to help you out in every way to overcome the
+                    heavy baggages you carry. We believe that the true feeling
+                    of happiness is when you make someone feel happy. The
+                    founder of VD , Mr. Manik Chopra has been living his dream
+                    life everyday by bringing smiles on everyone's faces. It has
+                    been his motive all the way to help out everyone by hearing
+                    them out and making them believe in theselves, making them
+                    choose a life where they are the writers. VD stands for One
+                    Day that is an organiztaion working on the betterment of
+                    world by providing services for students and common people
+                    that will teach them to cope up with the world joyfully and
+                    efficiently. We got you everytime you resisted yourself from
+                    expressing your thoughts in the fear of being judged or
+                    letting those guards down which you built over years. VD
+                    believes that there are always two perspectives to a
+                    situation everyone faces and we help you look at the
+                    positive one, the one which makes you glow, the one which
+                    motivates you to hustle every morning, the one which makes
+                    you HAPPY. Every soul has a different story to share and we
+                    would love to hear each one of them. Life is full of choices
+                    and VD chooses happiness!
                   </p>
                 </div>
               </div>
@@ -1058,7 +1079,8 @@ Book an Appointment &emsp; --></pre>
           </div>
           <div class="contact-container-inner-1">
             <div class="contact-us">
-              <form action="/contact" method="POST">
+              <form action="/contact/" method="POST">
+                {% csrf_token %}
                 <table style="width: 100%; text-align: left;">
                   <tr>
                     <td><label for="fname">First Name</label></td>
@@ -1080,12 +1102,11 @@ Book an Appointment &emsp; --></pre>
                   <tr>
                     <td><input type="text" id="email" name="email" /></td>
                   </tr>
-
                   <tr>
                     <td><label for="subject">Subject</label></td>
                   </tr>
                   <tr>
-                    <td><textarea id="subject" name="subject"></textarea></td>
+                    <td><textarea id="subject" name="sub"></textarea></td>
                   </tr>
                   <tr>
                     <td><input type="submit" value="Submit" /></td>
