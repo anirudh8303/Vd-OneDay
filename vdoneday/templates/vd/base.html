@@ -832,6 +832,86 @@
         cursor: pointer;
       }
     }
+    @media (min-width: 1170px) {
+      #events {
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(
+          to right,
+          rgb(203, 219, 197),
+          rgb(218, 216, 216)
+        );
+
+        margin-top: 1%;
+      }
+
+      .event-desc {
+        padding: 2%;
+      }
+
+      .event-img img {
+        border: 10px solid white;
+        margin: 1%;
+      }
+      a:hover {
+        color: rgb(79, 107, 79);
+      }
+    }
+
+    @media (min-width: 775px) and (max-width: 1170px) {
+      #events {
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(
+          to right,
+          rgb(203, 219, 197),
+          rgb(218, 216, 216)
+        );
+        margin-top: 1%;
+      }
+
+      .event-desc {
+        padding: 2%;
+
+        width: 100%;
+      }
+
+      .event-img img {
+        border: 10px solid white;
+        height: 450px;
+        width: 450px;
+      }
+      a:hover {
+        color: rgb(79, 107, 79);
+      }
+    }
+
+    @media (max-width: 775px) {
+      #events {
+        background: linear-gradient(
+          to right,
+          rgb(203, 219, 197),
+          rgb(218, 216, 216)
+        );
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .event-desc {
+        padding: 2%;
+
+        width: 100%;
+      }
+
+      .event-img img {
+        border: 10px solid white;
+        width: 100%;
+        height: 100%;
+      }
+      a:hover {
+        color: rgb(79, 107, 79);
+      }
+    }
   </style>
 
   <body>
@@ -852,7 +932,7 @@
             <ul class="nav no-search">
               <li class="nav-item"><a href="#"></a></li>
               <li class="nav-item"><a href="/">Home</a></li>
-              <li class="nav-item"><a href="/event">Events</a></li>
+              <li class="nav-item"><a href="#events_start">Events</a></li>
               <li class="nav-item"><a href="#contact">Contact Us</a></li>
             </ul>
           </nav>
@@ -1048,6 +1128,33 @@ Book an Appointment &emsp; --></pre>
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+      <div id="events_start">
+        <div id="events">
+          <div class="event-desc" style="margin-top: 100px;">
+            <h3>OUR <br />EVENTS</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor
+            purus non enim praesent elementum facilisis leo vel. Commodo nulla
+            facilisi nullam vehicula.Sem null Enim sit amet venenatis urna.Dolor
+            purus non enim praesent elementum facilisis leo vel. Commodo nulla
+            facilisi nullam vehicula.Sem null Enim sit amet venenatis urna.<br />
+            Have a glance at our past and upcoming events.<br /><br />
+            <a href="/pastevents" style="text-decoration: none; color: green;">
+              <h6>Past Events »</h6>
+            </a>
+            <br />
+            <a
+              href="/upcomingevents"
+              style="text-decoration: none; color: green;"
+            >
+              <h6>Upcoming Events »</h6>
+            </a>
+          </div>
+          <div class="event-img" style="margin-top: 120px;">
+            <img src="/media/vd/events-image.jpg" alt="" />
           </div>
         </div>
       </div>
