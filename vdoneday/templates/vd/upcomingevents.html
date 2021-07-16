@@ -394,7 +394,7 @@
                 type="button"
                 class="btn btn-primary"
                 data-toggle="modal"
-                data-target="#exampleModalLong"
+                data-target="#a"
               >
                 Register
               </button>
@@ -402,7 +402,7 @@
               <!-- Modal -->
               <div
                 class="modal fade"
-                id="exampleModalLong"
+                id="a"
                 tabindex="-1"
                 role="dialog"
                 aria-labelledby="exampleModalLongTitle"
@@ -412,7 +412,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLongTitle">
-                        Modal title
+                        Register for {{event.event_name}}
                       </h5>
                       <button
                         type="button"
@@ -424,19 +424,54 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
+                      <form>
+                        <div class="form-group">
+                          <div class="form-group">
+                            <label for="exampleInputName">Full Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInputName"
+                              placeholder="Full Name"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputOrg"
+                              >Organization Name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInputOrg"
+                              placeholder="Organization Name"
+                            />
+                          </div>
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter email"
+                          />
+                          <small id="emailHelp" class="form-text text-muted"
+                            >We'll never share your email with anyone
+                            else.</small
+                          >
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPhone">Phone</label>
+                          <input
+                            type="phone"
+                            class="form-control"
+                            id="exampleInputPhone"
+                            placeholder="Phone Number"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                          Register
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>
