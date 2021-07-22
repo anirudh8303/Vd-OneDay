@@ -21,7 +21,6 @@
       width: 100%;
       position: -webkit-fixed; /* Safari */
       position: fixed;
-      top: 0;
       background-color: #fff;
       opacity: 90%;
       z-index: 5;
@@ -41,25 +40,27 @@
 
     .navbar {
       display: grid;
-      grid-template-columns: 1fr;
-      margin: 0 auto;
-      height: 7em;
+      grid-template-columns: 3fr 1fr;
+      align-items: center;
+      height: 3.5em;
       overflow: hidden;
     }
 
     .navbar img {
-      height: 7em;
+      height: 3.5em;
       width: auto;
-      position: absolute;
-      top: -1.5em;
-      right: 48%;
+      justify-self: start;
+      position: relative;
+        top: -12%;
+        left: 4%;
     }
 
     .navbar ul {
       list-style: none;
       display: grid;
       grid-template-columns: auto auto auto auto;
-      margin-top: 2em;
+      position: relative;
+      top: -12%;
     }
 
     .nav-item a {
@@ -155,7 +156,7 @@
     @media (min-width: 1170px) {
       .sectionCSS {
         position: absolute;
-        top: 7.1em;
+        top: 4em;
         width: 100%;
         margin-left: -1em;
       }
@@ -371,7 +372,7 @@
     @media (min-width: 775px) and (max-width: 1170px) {
       .sectionCSS {
         position: absolute;
-        top: 7.1em;
+        top: 4em;
         width: 100%;
         margin-left: -1em;
       }
@@ -603,11 +604,11 @@
         display: grid;
         grid-template-columns: 1fr;
         margin: 0 auto;
-        height: 5em;
+        height: 4em;
         overflow: hidden;
       }
       .navbar img {
-        height: 5em;
+        height: 4em;
         width: auto;
         position: absolute;
         top: -4%;
@@ -629,7 +630,6 @@
       .bar {
         display: block;
         cursor: pointer;
-        top: 38%;
         position: relative;
         right: 2%;
       }
@@ -639,7 +639,7 @@
       }
       .sectionCSS {
         position: absolute;
-        top: 5em;
+        top: 4em;
         width: 100%;
         margin-left: 0em;
       }
@@ -917,30 +917,25 @@
   <body>
     <!------------------------------------------------------NAVBAR-------------------------------------------------------->
     <section>
-      <div>
         <div class="nav-wrapper">
           <nav class="navbar">
-            <div width="100vw">
               <img src="../../media/vd/VD2.png" alt="Company Logo" />
-            </div>
             <div class="menu-toggle" id="mobile-menu">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
             </div>
-            <br />
             <ul class="nav no-search">
-              <li class="nav-item"><a href="#"></a></li>
-              <li class="nav-item"><a href="/">Home</a></li>
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item"><a href="/">About</a></li>
               <li class="nav-item"><a href="#events_start">Events</a></li>
               <li class="nav-item"><a href="#contact">Contact Us</a></li>
             </ul>
           </nav>
           <div class="grad-bar"></div>
         </div>
-      </div>
 
-      {% for message in messages %}
+     <!-- {% for message in messages %}
       <div
         class="alert alert-{{message.tags}} alert-dismissible fade show"
         role="alert"
@@ -955,7 +950,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      {% endfor %}
+      {% endfor %} -->
 
       <div style="position: fixed; top: 18em; z-index: 100; right: 2em;">
         <img
@@ -1232,6 +1227,10 @@ Book an Appointment &emsp; --></pre>
       $(".menu-toggle").click(function () {
         $(".nav").toggleClass("mobile-nav");
         $(this).toggleClass("is-active");
+      });
+      $(".nav-item").click(function () {
+        $(".nav").toggleClass("mobile-nav");
+        $(".menu-toggle").toggleClass("is-active");
       });
     </script>
 
