@@ -319,54 +319,174 @@
         padding-top: 5%;
       }
 
-      #contact {
-        background-color: #212121;
-        padding: 3% 15%;
-        color: #c6c6c6;
-        width: 100%;
-        margin-left: 1em;
-      }
+    
+    #events {
+      width: 100%;
+      margin-left: 1em;
+    }
 
-      .contact-heading {
-        font-size: 32px;
-        color: #f0f0f0;
-        letter-spacing: -2px;
-        font-weight: 500;
-        padding-bottom: 4%;
-      }
+    .events-heading {
 
-      .contact-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
-        grid-gap: 12%;
-      }
+      padding-top: 3%;
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      padding-bottom: 1%;
+      text-align: center;
+    }
 
-      .contact-container-inner-1 h4 {
-        font-size: 22px;
-        font-weight: normal;
-      }
+    .events-description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      grid-gap: 0.12%;
+      width: 100%;
+    }
 
-      input[type="text"],
-      textarea {
-        width: 100%;
-        padding: 4px;
-        border: 1px solid#c6c6c6;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-        background-color: #212121;
-        color: white;
-      }
 
-      input[type="submit"] {
-        background-color: #212121;
-        color: #cbdbc5;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
+    .up,
+    .past {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .up .overlay,
+    .past .overlay {
+      opacity: 1;
+    }
+
+    .text h3 {
+      letter-spacing: 1px;
+    }
+
+    .text a:hover {
+      background-color: #fff;
+      color: black;
+    }
+
+
+    .text a {
+      text-decoration: none;
+      border: 3px solid white;
+      color: white;
+      padding: 3%;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .text {
+      color: white;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: 5px solid white;
+      padding: 5% 5%;
+    }
+
+    #contact {
+      background-color: #212121;
+      padding: 3% 15%;
+      color: #c6c6c6;
+      width: 100%;
+      margin-left: 1em;
+    }
+
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 12%;
+    }
+
+
+    .contact-heading {
+      font-size: 32px;
+      color: #f0f0f0;
+      letter-spacing: -2px;
+      font-weight: 500;
+      padding-bottom: 4%;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+
+    .get-in-touch-div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2%;
+      margin: 2% 5% 2% 7%;
+    }
+
+    .get-in-touch-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      padding-top: 3%;
+      text-align: center;
+    }
+
+    .get-in-touch-div div {
+      margin: 3% 3%;
+    }
+
+    #get-in-touch-section {
+      margin: 0;
+      padding: 0;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 4px;
+
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+
+      color: black;
+      border: none;
+      border-bottom: 2px solid #c6c6c6;
+    }
+
+    input[type="submit"] {
+
+      color: #4a723b;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+    
     }
     /*---------------------------------------Medium Screen View------------------------------------------------------------*/
     @media (min-width: 775px) and (max-width: 1170px) {
@@ -533,55 +653,183 @@
       .founder-text p {
         padding-top: 5%;
       }
+ #events {
 
-      #contact {
-        background-color: #212121;
-        padding: 3% 15%;
-        color: #c6c6c6;
-        width: 100%;
-        margin-left: 1em;
-      }
 
-      .contact-heading {
-        font-size: 32px;
-        color: #f0f0f0;
-        letter-spacing: -2px;
-        font-weight: 500;
-        padding-bottom: 4%;
-      }
 
-      .contact-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
-        grid-gap: 12%;
-      }
+      width: 100%;
+      margin-left: 1em;
+    }
 
-      .contact-container-inner-1 h4 {
-        font-size: 22px;
-        font-weight: normal;
-      }
+    .events-heading {
 
-      input[type="text"],
-      textarea {
-        width: 100%;
-        padding: 4px;
-        border: 1px solid#c6c6c6;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-        background-color: #212121;
-        color: white;
-      }
+      padding-top: 3%;
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      padding-bottom: 1%;
+      text-align: center;
+    }
 
-      input[type="submit"] {
-        background-color: #212121;
-        color: #cbdbc5;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
+    .events-description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      grid-gap: 0.15%;
+      width: 100%;
+    }
+
+
+    .up,
+    .past {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .up .overlay,
+    .past .overlay {
+      opacity: 1;
+    }
+
+    .text h3 {
+      letter-spacing: 1px;
+    }
+
+    .text a:hover {
+      background-color: #fff;
+      color: black;
+    }
+
+
+    .text a {
+      text-decoration: none;
+      border: 3px solid white;
+      color: white;
+      padding: 3%;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .text {
+      color: white;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: 5px solid white;
+      padding: 5% 5%;
+    }
+
+    .past .text {
+      padding-top: 7%;
+    }
+
+    #contact {
+      background-color: #212121;
+      padding: 3% 15%;
+      color: #c6c6c6;
+      width: 100%;
+      margin-left: 1em;
+    }
+
+    .contact-heading {
+      font-size: 32px;
+      color: #f0f0f0;
+      letter-spacing: -2px;
+      font-weight: 500;
+      padding-bottom: 4%;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 12%;
+    }
+
+    .contact-container-inner-1 h4 {
+      font-size: 22px;
+      font-weight: normal;
+    }
+
+    .contact-us {
+      padding: 7% 0%;
+    }
+
+
+    .get-in-touch-div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+
+    }
+
+    #get-in-touch-section {
+
+      margin: 2% 5%;
+    }
+
+
+    .get-in-touch-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      padding-top: 3%;
+      padding-bottom: -1%;
+      text-align: center;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 4px;
+
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+
+      color: black;
+      border: none;
+      border-bottom: 2px solid #c6c6c6;
+    }
+
+    input[type="submit"] {
+
+      color: #71b159;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+    
+
+     
     }
 
     /*-------------------------------------------For Mobile View---------------------------------------------------------*/
@@ -718,10 +966,7 @@
         text-align: center;
       }
 
-      .contact-container {
-        display: flex;
-        flex-direction: column;
-      }
+     
 
       .border-radius {
         border-radius: 50%;
@@ -776,41 +1021,173 @@
       .founder-text p {
         padding-top: 5%;
       }
+      
+    #events {
+      width: 100%;
+      margin-left: 1em;
+    }
 
-      #contact {
-        background-color: #212121;
-        padding: 3% 5%;
-        color: #c6c6c6;
-        position: relative;
-        width: 100%;
-        margin: 0%;
-      }
+    .events-heading {
 
-      .contact-heading {
-        font-size: 32px;
-        color: #f0f0f0;
-        letter-spacing: -2px;
-        font-weight: 500;
-        padding-bottom: 4%;
-      }
+      padding-top: 3%;
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      padding-bottom: 1%;
+      text-align: center;
+    }
 
-      .contact-container-inner-1 h4 {
-        font-size: 22px;
-        font-weight: normal;
-      }
+    .events-description {
+      display: grid;
+      display: block;
+      height: 100%;
 
-      input[type="text"],
-      textarea {
-        width: 100%;
-        padding: 4px;
-        border: 1px solid#c6c6c6;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-        background-color: #212121;
-        color: white;
-      }
+      width: 100%;
+    }
+
+
+    .up,
+    .past {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-top: 1%;
+
+
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .up .overlay,
+    .past .overlay {
+      opacity: 1;
+    }
+
+    .text h3 {
+      letter-spacing: 1px;
+    }
+
+    .text a:hover {
+      background-color: #fff;
+      color: black;
+    }
+
+
+    .text a {
+      text-decoration: none;
+      border: 3px solid white;
+      color: white;
+      padding: 3%;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .text {
+      color: white;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: 5px solid white;
+      padding: 5% 5%;
+    }
+
+    #contact {
+      background-color: #212121;
+      padding: 3% 5%;
+      color: #c6c6c6;
+      position: relative;
+      width: 100%;
+      margin: 0%;
+    }
+
+    .contact-heading {
+      font-size: 32px;
+      color: #f0f0f0;
+      letter-spacing: -2px;
+      font-weight: 500;
+      padding-bottom: 4%;
+    }
+
+    .contact-container {
+      display: block;
+    }
+
+    .contact-container-inner-1 h4 {
+      font-size: 22px;
+      font-weight: normal;
+    }
+
+    .get-in-touch-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      padding-top: 7%;
+      padding-bottom: 7%;
+      text-align: center;
+    }
+
+
+
+    .get-in-touch-div {
+      display: block;
+
+    }
+
+    #get-in-touch-section {
+
+      margin: 5% 5%;
+    }
+
+
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 4px;
+
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+
+      color: black;
+      border: none;
+      border-bottom: 2px solid #c6c6c6;
+    }
+
+    input[type="submit"] {
+
+      color: #4c8537;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+
+    }
+
+      
       #phn {
         width: 100%;
         padding: 4px;
@@ -823,94 +1200,7 @@
         color: white;
       }
 
-      input[type="submit"] {
-        background-color: #212121;
-        color: #cbdbc5;
-        padding: 12px 20px;
-        border: 4px solid white;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-    }
-    @media (min-width: 1170px) {
-      #events {
-        display: flex;
-        flex-direction: row;
-        background: linear-gradient(
-          to right,
-          rgb(203, 219, 197),
-          rgb(218, 216, 216)
-        );
-
-        margin-top: 1%;
-      }
-
-      .event-desc {
-        padding: 2%;
-      }
-
-      .event-img img {
-        border: 10px solid white;
-        margin: 1%;
-      }
-      a:hover {
-        color: rgb(79, 107, 79);
-      }
-    }
-
-    @media (min-width: 775px) and (max-width: 1170px) {
-      #events {
-        display: flex;
-        flex-direction: row;
-        background: linear-gradient(
-          to right,
-          rgb(203, 219, 197),
-          rgb(218, 216, 216)
-        );
-        margin-top: 1%;
-      }
-
-      .event-desc {
-        padding: 2%;
-
-        width: 100%;
-      }
-
-      .event-img img {
-        border: 10px solid white;
-        height: 450px;
-        width: 450px;
-      }
-      a:hover {
-        color: rgb(79, 107, 79);
-      }
-    }
-
-    @media (max-width: 775px) {
-      #events {
-        background: linear-gradient(
-          to right,
-          rgb(203, 219, 197),
-          rgb(218, 216, 216)
-        );
-        display: flex;
-        flex-direction: column-reverse;
-      }
-
-      .event-desc {
-        padding: 2%;
-
-        width: 100%;
-      }
-
-      .event-img img {
-        border: 10px solid white;
-        width: 100%;
-        height: 100%;
-      }
-      a:hover {
-        color: rgb(79, 107, 79);
-      }
+    
     }
   </style>
 
@@ -1126,101 +1416,154 @@ Book an Appointment &emsp; --></pre>
           </div>
         </div>
       </div>
-      <div id="events_start">
-        <div id="events">
-          <div class="event-desc" style="margin-top: 100px;">
-            <h3>OUR <br />EVENTS</h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor
-            purus non enim praesent elementum facilisis leo vel. Commodo nulla
-            facilisi nullam vehicula.Sem null Enim sit amet venenatis urna.Dolor
-            purus non enim praesent elementum facilisis leo vel. Commodo nulla
-            facilisi nullam vehicula.Sem null Enim sit amet venenatis urna.<br />
-            Have a glance at our past and upcoming events.<br /><br />
-            <a href="/pastevents" style="text-decoration: none; color: green;">
-              <h6>Past Events »</h6>
-            </a>
-            <br />
-            <a
-              href="/upcomingevents"
-              style="text-decoration: none; color: green;"
-            >
-              <h6>Upcoming Events »</h6>
-            </a>
-          </div>
-          <div class="event-img" style="margin-top: 120px;">
-            <img src="/media/vd/events-image.jpg" alt="" />
-          </div>
-        </div>
+      
+      <!---------------------------------------------------------EVENTS SECTION----------------------------------------------------------------->
+      
+    <section id="events">
+      <div class="events-heading">
+        <h1>Our Events</h1>
       </div>
-
-      <div id="contact">
-        <div class="contact-heading">CONTACT</div>
-        <div class="contact-container">
-          <div class="contact-container-inner-1">
-            <h4>ADDRESS</h4>
-            <p>500 Terry Francois Street San Francisco, CA 94158</p>
-            <br />
-            <h4>OPENING HOURS</h4>
-            <p>
-              Mon - Fri :<br />
-              10am - 7pm
-            </p>
-            <p>
-              Sat - Sun :<br />
-              11am - 4pm
-            </p>
-            <br />
-          </div>
-          <div class="contact-container-inner-1">
-            <h4>CONTACT US</h4>
-            <p>
-              123-456-7890<br />
-              info@mysite.com
-            </p>
-          </div>
-          <div class="contact-container-inner-1">
-            <div class="contact-us">
-              <form action="/contact/" method="POST">
-                {% csrf_token %}
-                <table style="width: 100%; text-align: left;">
-                  <tr>
-                    <td><label for="fname">First Name</label></td>
-                  </tr>
-                  <tr>
-                    <td><input type="text" id="fname" name="first_name" /></td>
-                  </tr>
-
-                  <tr>
-                    <td><label for="lname">Last Name</label></td>
-                  </tr>
-                  <tr>
-                    <td><input type="text" id="lname" name="last_name" /></td>
-                  </tr>
-
-                  <tr>
-                    <td><label for="lname">E-mail Id</label></td>
-                  </tr>
-                  <tr>
-                    <td><input type="text" id="email" name="email" /></td>
-                  </tr>
-                  <tr>
-                    <td><label for="subject">Subject</label></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="subject" name="sub"></textarea></td>
-                  </tr>
-                  <tr>
-                    <td><input type="submit" value="Submit" /></td>
-                  </tr>
-                </table>
-              </form>
+      <div class="events-description">
+        <div class="past">
+          <img
+            src="https://images.pexels.com/photos/3321793/pexels-photo-3321793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h2>PAST EVENTS</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit.
+              </p><br>
+              <a href="#">Know More</a>
             </div>
           </div>
         </div>
-        © 2023 by BRW BAR inc. Proudly created with Wix.com
+        <div class=" up">
+          <img
+            src="https://images.pexels.com/photos/3719037/pexels-photo-3719037.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h2>UPCOMING EVENTS</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit.</p><br>
+              <a href="#">Check Here</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+<!---------------------------------------------------------CONTACT SECTION---------------------------------------------------------------------------------->
+    <section id="get-in-touch-section">
+
+      <div class="get-in-touch-heading">
+        <h1>Get In Touch With Us</h1>
+
+      </div>
+      <div class="get-in-touch-div">
+
+        <div class="get-in-touch_image">
+          <img height="100%" width="100%" src="../media/vd/undraw_Subscriber_re_om92.svg " alt="image">
+        </div>
+
+        <div class="get-in-touch-form">
+          <div class="contact-us" style="width:100%;height:100%;">
+            <form action="/contact/" method="POST">
+              {% csrf_token %}
+              <table style="width: 100%; text-align: left;">
+                <tr>
+                  <td><label for="fname">First Name</label></td>
+                </tr>
+                <tr>
+                  <td><input type="text" id="fname" name="first_name" /></td>
+                </tr>
+
+                <tr>
+                  <td><label for="lname">Last Name</label></td>
+                </tr>
+                <tr>
+                  <td><input type="text" id="lname" name="last_name" /></td>
+                </tr>
+
+                <tr>
+                  <td><label for="email">E-mail Id</label></td>
+                </tr>
+                <tr>
+                  <td><input type="text" id="email" name="email" /></td>
+                </tr>
+                <tr>
+                  <td><label for="subject">Subject</label></td>
+                </tr>
+                <tr>
+                  <td><textarea rows="6" id="subject" name="sub"></textarea></td>
+                </tr>
+                <tr>
+                  <td style=" text-align:center;"><input type="submit" value="Submit" /></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+
+        </div>
       </div>
     </section>
+      
+      <!------------------------------------------------------------------------------------------------------------------------------>
+      
+       <section id="contact">
+      <div class="contact-heading">CONTACT</div>
+      <div class="contact-container">
+        <div class="contact-container-inner-1">
+          <h4>ADDRESS</h4>
+          <p>500 Terry Francois Street San Francisco, CA 94158</p>
+          <br>
+        </div>
+        <div class="contact-container-inner-1">
+          <h4>OPENING HOURS</h4>
+          <p>
+            Mon - Fri :<br />
+            10am - 7pm
+          </p>
+          <p>
+            Sat - Sun :<br />
+            11am - 4pm
+          </p>
+          <br />
+        </div>
+        <div class="contact-container-inner-1">
+          <h4>CONTACT US</h4>
+          <p>
+            123-456-7890<br />
+            info@mysite.com
+          </p>
+        </div>
+
+      </div>
+
+
+    </section>
+      <!----------------------------------------------------------------------------->
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
